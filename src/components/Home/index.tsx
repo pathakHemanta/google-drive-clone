@@ -7,7 +7,11 @@ export default function HomeComponent(){
 
     let {session} = useFetchSession();
 
+    console.log(session?.user.image);
+
     return (
-        <div className={styles.authBtn}> {session ? (<Button onClick={() => signOut()} btnClass="btn-primary" title="Sign Out!"/>) : (<Button onClick={() => signIn()} btnClass="btn-primary" title="Sign Up!"/>)}</div>
+        <div className={styles.authBtn}> {session ? (<div>
+            <img className={styles.profileImg} src={session?.user.image as string} />
+            <Button onClick={() => signOut()} btnClass="btn-primary" title="Sign Out!"/></div>) : (<Button onClick={() => signIn()} btnClass="btn-primary" title="Sign Up!"/>)}</div>
     )
 }
