@@ -8,7 +8,6 @@ export default function Topbar() {
 
   return (
     <div className={styles.authBtn}>
-      {" "}
       {session ? (
         <div>
           <img
