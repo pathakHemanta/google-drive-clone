@@ -3,7 +3,6 @@ import Link from "next/link";
 import HomeComponent from "@/components/Home/index";
 
 export default function Home() {
-
   return (
     <>
       <Head>
@@ -17,7 +16,7 @@ export default function Home() {
             {/* Welcome {session?.user.name} */}
           </h1>
           <HomeComponent />
-          </div>
+        </div>
       </main>
     </>
   );
